@@ -1,0 +1,36 @@
+{
+  "id": "adr:ga4-export-and-event-authority",
+  "number": 1002,
+  "slug": "ga4-export-and-event-authority",
+  "title": "GA4 Export And Event Authority",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "pack": "pack:ga4-google-tagging",
+  "scope": {
+    "governs": "GA4 And Google Tagging Governance",
+    "excludes": [
+      "Other governance packs",
+      "Downstream implementation-specific conformance claims",
+      "Repository-specific feature, claim, test, evidence, boundary, and release rows"
+    ]
+  },
+  "authority_sources": [
+    "GA4 Measurement Protocol reference",
+    "GA4 Measurement Protocol events reference",
+    "Google tag gtag.js API reference",
+    "Google Tag Manager developer documentation",
+    "GA4 BigQuery Export schema",
+    "Google Consent Mode overview"
+  ],
+  "decision": [
+    "Treat GA4 And Google Tagging Governance as the only governed domain for this pack.",
+    "Do not cross-link this pack to other governance packs.",
+    "Use packaged ADR and SPEC documents as immutable authority inputs for downstream SSOT synchronization.",
+    "Create downstream features, claims, tests, evidence, risks, boundaries, and releases outside the pack metadata lifecycle."
+  ],
+  "notes": [
+    "This document was seeded from digital-analytics-customer-data-collection-sources.md.",
+    "This pack intentionally does not refer to sibling governance packs."
+  ]
+}

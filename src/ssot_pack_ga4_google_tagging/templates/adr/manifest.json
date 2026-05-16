@@ -1,0 +1,38 @@
+[
+  {
+    "id": "adr:ga4-google-tagging-boundary",
+    "number": 1001,
+    "slug": "ga4-google-tagging-boundary",
+    "title": "GA4 Google Tagging Boundary",
+    "filename": "ADR-1001-ga4-google-tagging-boundary.yaml",
+    "target_path": ".ssot/adr/ADR-1001-ga4-google-tagging-boundary.yaml",
+    "sha256": "dc839690854110273dbb03f96d6ac230aecbc9776c6900ed6e31ba89ed6ea69a",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:ssot-pack-ga4-google-tagging",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.0",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": []
+  },
+  {
+    "id": "adr:ga4-export-and-event-authority",
+    "number": 1002,
+    "slug": "ga4-export-and-event-authority",
+    "title": "GA4 Export And Event Authority",
+    "filename": "ADR-1002-ga4-export-and-event-authority.yaml",
+    "target_path": ".ssot/adr/ADR-1002-ga4-export-and-event-authority.yaml",
+    "sha256": "64c380a3fa2607eb847a7c8ccedc432846141f43cec003a9ed91899d3eb56c77",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:ssot-pack-ga4-google-tagging",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.0",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": []
+  }
+]
