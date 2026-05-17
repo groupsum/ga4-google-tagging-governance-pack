@@ -1,0 +1,40 @@
+{
+  "id": "spc:ga4-bigquery-export-event-schema-requirements",
+  "number": 2010,
+  "slug": "ga4-bigquery-export-event-schema-requirements",
+  "title": "GA4 BigQuery Export Event Schema Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:ga4-bigquery-export-evidence-policy",
+    "adr:ga4-event-taxonomy-authority"
+  ],
+  "primary_targets": [
+    "GA4 BigQuery Export schema"
+  ],
+  "scope": {
+    "governs": [
+      "GA4 BigQuery Export event table shape",
+      "Event name, event parameters, timestamps, device, geo, app, traffic-source, and ecommerce fields where downstream scope includes them",
+      "Export evidence for event-shape conformance"
+    ],
+    "excludes": [
+      "GA4 reporting UI behavior",
+      "Google tag command behavior",
+      "Measurement Protocol request validation"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST identify the exported event tables and fields used as downstream evidence.",
+    "Implementations MUST validate nested and repeated event parameter shapes where those fields are in scope.",
+    "Implementations MUST preserve traceability between expected event taxonomy and exported event rows.",
+    "Implementations MUST distinguish export absence, export delay, malformed export rows, and unsupported export access."
+  ],
+  "evidence_expectations": [
+    "BigQuery export fixtures or query results covering expected event rows.",
+    "Schema validation output for governed exported fields.",
+    "Trace evidence linking source events or submissions to exported event records when available."
+  ]
+}

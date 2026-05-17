@@ -1,0 +1,41 @@
+{
+  "id": "spc:gtag-event-command-requirements",
+  "number": 2005,
+  "slug": "gtag-event-command-requirements",
+  "title": "Google Tag Event Command Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-tag-runtime-policy",
+    "adr:ga4-event-taxonomy-authority"
+  ],
+  "primary_targets": [
+    "Google tag gtag.js API reference",
+    "GA4 Measurement Protocol events reference"
+  ],
+  "scope": {
+    "governs": [
+      "gtag.js event command usage",
+      "Event names and event parameters passed through browser tag commands",
+      "Browser-side event dispatch evidence"
+    ],
+    "excludes": [
+      "Server-side Measurement Protocol request submission",
+      "GTM container-managed tag execution",
+      "BigQuery export schema"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST identify event names and event parameters sent with gtag.js event commands.",
+    "Implementations MUST keep event command invocation evidence separate from backend acceptance evidence.",
+    "Implementations MUST distinguish GA4-defined events from custom events.",
+    "Implementations MUST define behavior for invalid event names, missing parameters, and unsupported event parameters."
+  ],
+  "evidence_expectations": [
+    "Browser instrumentation logs showing event command calls.",
+    "Fixtures for valid, invalid, custom, and parameterized event commands.",
+    "Trace evidence linking UI or application actions to gtag.js event commands."
+  ]
+}

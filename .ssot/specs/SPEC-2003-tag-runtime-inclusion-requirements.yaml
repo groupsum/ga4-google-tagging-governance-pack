@@ -1,0 +1,34 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2003"
+number: 2003
+slug: "tag-runtime-inclusion-requirements"
+title: "Tag Runtime Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of Google tag `gtag.js` and Google Tag Manager targets in `pack:ga4-google-tagging`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of Google tag `gtag.js` and Google Tag Manager targets in `pack:ga4-google-tagging`.
+  
+  ## Requirements
+  
+  - The pack MUST include `gtag.js` config, event, set, get, and consent command surfaces when direct Google tag runtime behavior is governed.
+  - The pack MUST include GTM data-layer, container, tag, trigger, and variable surfaces when container-managed tagging behavior is governed.
+  - The pack MUST keep direct `gtag.js` behavior separate from GTM-managed deployment behavior.
+  - The pack MUST not treat browser tag execution evidence as proof of GA4 backend acceptance or BigQuery export shape.
+  - The pack MUST exclude non-Google tag managers unless a later repo-local decision expands scope.
+  
+  ## Evidence Expectations
+  
+  - Tag runtime templates should identify command, data-layer, or container evidence separately.
+  - Tests should distinguish application-owned instrumentation from container-managed behavior.
+  - Unsupported runtime modes should be explicit downstream outcomes, not implicit failures.
+spec_kind: "governance"

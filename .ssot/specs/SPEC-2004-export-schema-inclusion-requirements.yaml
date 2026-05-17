@@ -1,0 +1,33 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2004"
+number: 2004
+slug: "export-schema-inclusion-requirements"
+title: "Export Schema Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of GA4 BigQuery Export targets in `pack:ga4-google-tagging`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of GA4 BigQuery Export targets in `pack:ga4-google-tagging`.
+  
+  ## Requirements
+  
+  - The pack MUST include GA4 BigQuery Export schema as an exported event and user-property data-shape target.
+  - The pack MUST treat BigQuery Export rows as evidence for exported records, not as proof of all ingestion, tagging, reporting, or attribution behavior.
+  - The pack MUST keep event export shape, user-property export shape, item/ecommerce fields, device context, traffic-source context, and timestamp fields independently reviewable where downstream scope includes them.
+  - The pack MUST exclude GA4 reporting UI, GA4 Data API, attribution reports, and non-BigQuery reporting targets unless a later repo-local decision expands scope.
+  
+  ## Evidence Expectations
+  
+  - Export templates should identify table, column, nested-record, and repeated-record expectations.
+  - Export evidence should be traceable to downstream event or user-property claims.
+  - Reporting-only claims should not be linked to export schema evidence without a separate reporting authority.
+spec_kind: "governance"

@@ -1,0 +1,39 @@
+{
+  "id": "spc:google-tag-manager-container-deployment-requirements",
+  "number": 2009,
+  "slug": "google-tag-manager-container-deployment-requirements",
+  "title": "Google Tag Manager Container Deployment Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-tag-manager-deployment-policy"
+  ],
+  "primary_targets": [
+    "Google Tag Manager developer documentation"
+  ],
+  "scope": {
+    "governs": [
+      "GTM container installation and deployment evidence",
+      "Tag, trigger, variable, and container-version assumptions where downstream scope includes them",
+      "Boundary between application code and GTM-managed configuration"
+    ],
+    "excludes": [
+      "Direct gtag.js command validation",
+      "GA4 backend acceptance",
+      "Non-Google tag managers"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST define the GTM container identifiers and deployment surfaces they rely on.",
+    "Implementations MUST preserve evidence that the expected container is installed or loaded where applicable.",
+    "Implementations MUST document which tag, trigger, and variable assumptions are controlled outside the application repository.",
+    "Implementations SHOULD treat unavailable container evidence as an explicit runtime or operational state."
+  ],
+  "evidence_expectations": [
+    "Runtime evidence that the expected GTM container is present.",
+    "Configuration evidence for governed tags, triggers, and variables where available.",
+    "Negative examples for missing, wrong, blocked, or unavailable containers."
+  ]
+}

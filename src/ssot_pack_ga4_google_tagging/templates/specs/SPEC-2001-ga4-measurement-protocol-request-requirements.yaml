@@ -1,0 +1,40 @@
+{
+  "id": "spc:ga4-measurement-protocol-request-requirements",
+  "number": 2001,
+  "slug": "ga4-measurement-protocol-request-requirements",
+  "title": "GA4 Measurement Protocol Request Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:ga4-measurement-protocol-boundary"
+  ],
+  "primary_targets": [
+    "GA4 Measurement Protocol reference"
+  ],
+  "scope": {
+    "governs": [
+      "GA4 Measurement Protocol event ingestion request construction",
+      "Measurement endpoint inputs, client or app instance identifiers, event batches, request validation, and response handling",
+      "Submission evidence for server-side or non-browser GA4 events"
+    ],
+    "excludes": [
+      "Google tag browser commands",
+      "Google Tag Manager deployment",
+      "GA4 BigQuery Export schema",
+      "Google Ads conversion upload APIs"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST identify the GA4 Measurement Protocol endpoint and request fields they construct.",
+    "Implementations MUST define how measurement identifiers, API secrets, client identifiers, app instance identifiers, timestamps, user properties, and event arrays are supplied when those inputs are in downstream scope.",
+    "Implementations MUST distinguish request construction errors, validation errors, transport failures, and accepted submissions.",
+    "Implementations MUST preserve enough submission evidence to audit what event payload was sent and what response was observed."
+  ],
+  "evidence_expectations": [
+    "Request fixtures covering valid required fields, optional fields, missing identifiers, malformed events, and batched events.",
+    "Validation or runtime output showing request payload, response status, and error handling.",
+    "Trace evidence linking downstream event source records to submitted GA4 Measurement Protocol requests."
+  ]
+}

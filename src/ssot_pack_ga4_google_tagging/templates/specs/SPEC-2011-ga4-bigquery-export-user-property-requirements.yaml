@@ -1,0 +1,39 @@
+{
+  "id": "spc:ga4-bigquery-export-user-property-requirements",
+  "number": 2011,
+  "slug": "ga4-bigquery-export-user-property-requirements",
+  "title": "GA4 BigQuery Export User Property Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:ga4-bigquery-export-evidence-policy"
+  ],
+  "primary_targets": [
+    "GA4 BigQuery Export schema"
+  ],
+  "scope": {
+    "governs": [
+      "GA4 BigQuery Export user property shapes",
+      "User property value records and timestamps where downstream scope includes them",
+      "Evidence for exported user-property state"
+    ],
+    "excludes": [
+      "Customer identity profile governance",
+      "Legal user consent records",
+      "Non-GA4 profile schemas"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST identify exported user-property fields used as downstream evidence.",
+    "Implementations MUST distinguish user property export shape from customer identity profile conformance.",
+    "Implementations MUST define behavior for missing, delayed, malformed, or unavailable user-property export data.",
+    "Implementations MUST preserve evidence linking claimed user-property behavior to exported records when available."
+  ],
+  "evidence_expectations": [
+    "BigQuery export fixtures or query results covering user-property rows.",
+    "Schema validation output for governed user-property fields.",
+    "Negative examples for absent, delayed, or unavailable export data."
+  ]
+}

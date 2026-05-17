@@ -1,0 +1,39 @@
+{
+  "id": "spc:gtag-config-command-requirements",
+  "number": 2004,
+  "slug": "gtag-config-command-requirements",
+  "title": "Google Tag Config Command Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-tag-runtime-policy"
+  ],
+  "primary_targets": [
+    "Google tag gtag.js API reference"
+  ],
+  "scope": {
+    "governs": [
+      "gtag.js config command usage",
+      "Destination configuration and config parameter evidence",
+      "Config command ordering relative to later event or consent commands where downstream scope includes ordering"
+    ],
+    "excludes": [
+      "GTM container configuration",
+      "Measurement Protocol request construction",
+      "BigQuery export schema"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST identify the destinations and config parameters they configure through gtag.js.",
+    "Implementations MUST preserve evidence of config command invocation and ordering when browser runtime evidence is in scope.",
+    "Implementations MUST distinguish config command support from event command support.",
+    "Implementations MUST define behavior for missing destination identifiers or unsupported config parameters."
+  ],
+  "evidence_expectations": [
+    "Browser fixtures or instrumentation logs showing config command calls.",
+    "Positive and negative examples for destination IDs and config parameters.",
+    "Evidence linking config state to subsequent event or consent behavior when relevant."
+  ]
+}

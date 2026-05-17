@@ -1,0 +1,39 @@
+{
+  "id": "spc:gtag-set-get-command-requirements",
+  "number": 2006,
+  "slug": "gtag-set-get-command-requirements",
+  "title": "Google Tag Set And Get Command Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-tag-runtime-policy"
+  ],
+  "primary_targets": [
+    "Google tag gtag.js API reference"
+  ],
+  "scope": {
+    "governs": [
+      "gtag.js set command behavior for shared fields",
+      "gtag.js get command behavior for retrieving values where supported",
+      "Evidence for shared state used by later tag commands"
+    ],
+    "excludes": [
+      "GTM variables",
+      "Measurement Protocol payload fields",
+      "Browser storage or cookie governance outside Google tag command behavior"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST define which shared fields are set through gtag.js.",
+    "Implementations MUST define which values are retrieved through gtag.js get commands when get behavior is in downstream scope.",
+    "Implementations MUST preserve evidence of shared field state where later event or config behavior depends on that state.",
+    "Implementations MUST distinguish set/get command behavior from GTM variable behavior."
+  ],
+  "evidence_expectations": [
+    "Browser fixtures showing set and get command calls.",
+    "State evidence before and after shared field updates.",
+    "Negative examples for unsupported fields or unavailable values."
+  ]
+}

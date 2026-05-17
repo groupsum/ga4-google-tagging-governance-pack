@@ -1,0 +1,39 @@
+{
+  "id": "spc:ga4-recommended-event-parameter-requirements",
+  "number": 2003,
+  "slug": "ga4-recommended-event-parameter-requirements",
+  "title": "GA4 Recommended Event Parameter Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:ga4-event-taxonomy-authority"
+  ],
+  "primary_targets": [
+    "GA4 Measurement Protocol events reference"
+  ],
+  "scope": {
+    "governs": [
+      "Recommended GA4 event parameter sets",
+      "Parameter presence, type, naming, and value-shape expectations for supported events",
+      "Event parameter evidence used by downstream conformance claims"
+    ],
+    "excludes": [
+      "Request transport behavior",
+      "Google tag command behavior",
+      "Reporting UI metric definitions"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST define which recommended event parameter sets are in downstream scope.",
+    "Implementations MUST identify required, recommended, optional, and custom parameters separately.",
+    "Implementations MUST preserve enough parameter evidence to explain event validation outcomes.",
+    "Implementations MUST not claim support for all GA4 recommended events unless all relevant event parameter sets are covered."
+  ],
+  "evidence_expectations": [
+    "Parameter fixtures for supported recommended events.",
+    "Validation reports for missing, malformed, extra, and custom parameters.",
+    "Trace output linking parameter values to source event records."
+  ]
+}

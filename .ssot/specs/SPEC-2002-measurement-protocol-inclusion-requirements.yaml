@@ -1,0 +1,34 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2002"
+number: 2002
+slug: "measurement-protocol-inclusion-requirements"
+title: "Measurement Protocol Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of GA4 Measurement Protocol targets in `pack:ga4-google-tagging`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of GA4 Measurement Protocol targets in `pack:ga4-google-tagging`.
+  
+  ## Requirements
+  
+  - The pack MUST include Measurement Protocol request construction, validation, and submission behavior when governing server-side or non-browser GA4 ingestion.
+  - The pack MUST include Measurement Protocol event references when governing accepted GA4 event names and parameters.
+  - The pack MUST keep request transport requirements separate from event taxonomy requirements.
+  - The pack MUST reject Google Ads conversion upload APIs, offline conversion APIs, and non-GA4 ingestion APIs from Measurement Protocol scope.
+  - The pack MUST not claim GA4 reporting or export conformance from Measurement Protocol request requirements alone.
+  
+  ## Evidence Expectations
+  
+  - Measurement Protocol templates must distinguish request evidence from event taxonomy evidence.
+  - Templates should identify required fields, optional fields, error behavior, and validation evidence expectations.
+  - Adjacent Google Ads conversion APIs should remain absent from this pack unless superseded by a later repo-local ADR.
+spec_kind: "governance"

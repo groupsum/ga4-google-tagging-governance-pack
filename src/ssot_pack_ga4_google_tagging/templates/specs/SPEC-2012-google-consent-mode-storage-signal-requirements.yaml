@@ -1,0 +1,41 @@
+{
+  "id": "spc:google-consent-mode-storage-signal-requirements",
+  "number": 2012,
+  "slug": "google-consent-mode-storage-signal-requirements",
+  "title": "Google Consent Mode Storage Signal Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-consent-mode-signal-policy"
+  ],
+  "primary_targets": [
+    "Google Consent Mode overview"
+  ],
+  "scope": {
+    "governs": [
+      "Google Consent Mode storage signals relevant to analytics and advertising storage",
+      "Default and updated consent-state behavior",
+      "Evidence separating Google tag consent-state signaling from legal consent authorization"
+    ],
+    "excludes": [
+      "IAB GPP",
+      "IAB Europe TCF",
+      "Global Privacy Control",
+      "Consent receipt records",
+      "Privacy-law compliance determinations"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST identify which Google Consent Mode storage signals are in downstream scope.",
+    "Implementations MUST define default and update behavior for governed consent-state signals.",
+    "Implementations MUST preserve evidence of consent-state signal inputs and effective state changes.",
+    "Implementations MUST not treat Google Consent Mode evidence as legal consent or privacy-compliance evidence by itself."
+  ],
+  "evidence_expectations": [
+    "Fixtures for default and updated Consent Mode storage signals.",
+    "Browser/runtime evidence showing consent-state command behavior.",
+    "Negative examples for unknown signals, missing defaults, and unsupported consent-state behavior."
+  ]
+}

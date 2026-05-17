@@ -1,0 +1,40 @@
+{
+  "id": "spc:ga4-measurement-protocol-event-requirements",
+  "number": 2002,
+  "slug": "ga4-measurement-protocol-event-requirements",
+  "title": "GA4 Measurement Protocol Event Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:ga4-event-taxonomy-authority",
+    "adr:ga4-measurement-protocol-boundary"
+  ],
+  "primary_targets": [
+    "GA4 Measurement Protocol events reference"
+  ],
+  "scope": {
+    "governs": [
+      "GA4 event names accepted or recommended by the event reference",
+      "Event-specific required and optional parameters",
+      "Custom event and custom parameter handling where downstream scope includes them"
+    ],
+    "excludes": [
+      "Non-GA4 event taxonomies",
+      "GA4 reporting UI behavior",
+      "BigQuery export table shape"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST identify which GA4 event names they claim to support.",
+    "Implementations MUST validate required and optional event parameters for governed GA4 events.",
+    "Implementations MUST distinguish Google-defined event parameters from downstream custom parameters.",
+    "Implementations MUST preserve event taxonomy evidence separately from transport request evidence."
+  ],
+  "evidence_expectations": [
+    "Event fixtures for each governed GA4 event name.",
+    "Positive and negative parameter validation examples.",
+    "Mapping evidence from internal event names to GA4 event names when translation occurs."
+  ]
+}

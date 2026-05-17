@@ -32,18 +32,23 @@ class GovernancePackManifestTests(unittest.TestCase):
         manifest = load_pack_manifest()
         self.assertEqual("ssot-pack-ga4-google-tagging", manifest["metadata"]["origin"]["package_name"])
         self.assertEqual(6, len(manifest["documents"]["adr"]))
-        self.assertEqual(4, len(manifest["documents"]["spec"]))
+        self.assertEqual(12, len(manifest["documents"]["spec"]))
 
     def test_packaged_documents_are_readable(self) -> None:
         adr_manifest = load_document_manifest("adr")
         spec_manifest = load_document_manifest("spec")
         self.assertEqual("adr:ga4-measurement-protocol-boundary", adr_manifest[0]["id"])
-        self.assertEqual("spc:ga4-measurement-protocol-contract", spec_manifest[0]["id"])
-        self.assertIn("GA4 And Google Tagging Governance", read_packaged_document_text("spec", spec_manifest[0]["filename"]))
+        self.assertEqual("spc:ga4-measurement-protocol-request-requirements", spec_manifest[0]["id"])
 
     def test_packaged_adr_documents_are_downstream_portable(self) -> None:
         for row in load_document_manifest("adr"):
             text = read_packaged_document_text("adr", row["filename"])
+            self.assertNotIn("pack:", text)
+            self.assertNotIn("This pack", text)
+
+    def test_packaged_spec_documents_are_downstream_portable(self) -> None:
+        for row in load_document_manifest("spec"):
+            text = read_packaged_document_text("spec", row["filename"])
             self.assertNotIn("pack:", text)
             self.assertNotIn("This pack", text)
 

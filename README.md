@@ -37,10 +37,18 @@ GA4 And Google Tagging Governance
 
 ## Included SPECs
 
-- `spc:ga4-measurement-protocol-contract` - GA4 Measurement Protocol Contract
-- `spc:gtag-api-contract` - Google Tag API Contract
-- `spc:ga4-event-parameter-contract` - GA4 Event Parameter Contract
-- `spc:ga4-bigquery-export-contract` - GA4 BigQuery Export Contract
+- `spc:ga4-measurement-protocol-request-requirements` - GA4 Measurement Protocol Request Requirements
+- `spc:ga4-measurement-protocol-event-requirements` - GA4 Measurement Protocol Event Requirements
+- `spc:ga4-recommended-event-parameter-requirements` - GA4 Recommended Event Parameter Requirements
+- `spc:gtag-config-command-requirements` - Google Tag Config Command Requirements
+- `spc:gtag-event-command-requirements` - Google Tag Event Command Requirements
+- `spc:gtag-set-get-command-requirements` - Google Tag Set And Get Command Requirements
+- `spc:gtag-consent-command-requirements` - Google Tag Consent Command Requirements
+- `spc:google-tag-manager-data-layer-requirements` - Google Tag Manager Data Layer Requirements
+- `spc:google-tag-manager-container-deployment-requirements` - Google Tag Manager Container Deployment Requirements
+- `spc:ga4-bigquery-export-event-schema-requirements` - GA4 BigQuery Export Event Schema Requirements
+- `spc:ga4-bigquery-export-user-property-requirements` - GA4 BigQuery Export User Property Requirements
+- `spc:google-consent-mode-storage-signal-requirements` - Google Consent Mode Storage Signal Requirements
 
 ## Install With uv
 

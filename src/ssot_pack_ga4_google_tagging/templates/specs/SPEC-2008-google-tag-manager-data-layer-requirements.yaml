@@ -1,0 +1,39 @@
+{
+  "id": "spc:google-tag-manager-data-layer-requirements",
+  "number": 2008,
+  "slug": "google-tag-manager-data-layer-requirements",
+  "title": "Google Tag Manager Data Layer Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-tag-manager-deployment-policy"
+  ],
+  "primary_targets": [
+    "Google Tag Manager developer documentation"
+  ],
+  "scope": {
+    "governs": [
+      "GTM data-layer events and variables",
+      "Application-owned data-layer payload shape",
+      "Evidence linking application behavior to GTM-managed tag triggers"
+    ],
+    "excludes": [
+      "Direct gtag.js command behavior",
+      "Measurement Protocol request submission",
+      "Non-Google tag managers"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST define the data-layer event names and payload fields they emit for GTM.",
+    "Implementations MUST preserve evidence of data-layer pushes and payload values.",
+    "Implementations MUST distinguish application-owned data-layer behavior from container-owned tag execution.",
+    "Implementations MUST define behavior for missing, malformed, or duplicate data-layer events."
+  ],
+  "evidence_expectations": [
+    "Browser fixtures showing data-layer push calls.",
+    "Payload validation output for governed data-layer events.",
+    "Trace evidence linking data-layer events to application actions."
+  ]
+}

@@ -1,0 +1,34 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2005"
+number: 2005
+slug: "consent-mode-inclusion-requirements"
+title: "Consent Mode Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of Google Consent Mode targets in `pack:ga4-google-tagging`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of Google Consent Mode targets in `pack:ga4-google-tagging`.
+  
+  ## Requirements
+  
+  - The pack MUST include Google Consent Mode only as a Google tag consent-state signaling target.
+  - The pack MUST distinguish consent-state command behavior from legal consent authorization, privacy notice compliance, consent receipt storage, and regional privacy string transmission.
+  - The pack MAY include analytics storage and advertising storage signal expectations when they are governed through Google tag behavior.
+  - The pack MUST exclude GPP, TCF, GPC, Kantara consent receipts, ISO consent records, and broader privacy governance unless a later repo-local decision expands scope.
+  - The pack MUST not imply legal privacy compliance from Consent Mode implementation evidence.
+  
+  ## Evidence Expectations
+  
+  - Consent Mode templates should identify default consent state, update behavior, command shape, and storage-signal outcomes.
+  - Consent evidence should remain separate from legal authorization records.
+  - Privacy framework candidates should be reviewed for a privacy-governance pack before inclusion here.
+spec_kind: "governance"

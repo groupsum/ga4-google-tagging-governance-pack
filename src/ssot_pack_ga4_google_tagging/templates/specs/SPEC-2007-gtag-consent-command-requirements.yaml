@@ -1,0 +1,41 @@
+{
+  "id": "spc:gtag-consent-command-requirements",
+  "number": 2007,
+  "slug": "gtag-consent-command-requirements",
+  "title": "Google Tag Consent Command Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-tag-runtime-policy",
+    "adr:google-consent-mode-signal-policy"
+  ],
+  "primary_targets": [
+    "Google tag gtag.js API reference",
+    "Google Consent Mode overview"
+  ],
+  "scope": {
+    "governs": [
+      "gtag.js consent command usage",
+      "Default and updated Google tag consent state",
+      "Analytics and advertising storage signal behavior where downstream scope includes it"
+    ],
+    "excludes": [
+      "Legal consent authorization",
+      "Consent receipt storage",
+      "IAB GPP, TCF, or GPC privacy signals"
+    ]
+  },
+  "requirements": [
+    "Implementations MUST distinguish default consent state from updated consent state.",
+    "Implementations MUST define which Google Consent Mode storage signals are governed.",
+    "Implementations MUST preserve evidence of consent command inputs and effective consent-state updates.",
+    "Implementations MUST not assert legal privacy compliance from consent command behavior alone."
+  ],
+  "evidence_expectations": [
+    "Browser fixtures showing default and update consent command calls.",
+    "Evidence of analytics_storage and ad_storage outcomes when those signals are in downstream scope.",
+    "Negative examples for unknown consent signals and missing consent defaults."
+  ]
+}

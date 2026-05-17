@@ -1,0 +1,36 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2001"
+number: 2001
+slug: "ga4-target-curation-requirements"
+title: "GA4 Target Curation Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs source inclusion for `pack:ga4-google-tagging`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs source inclusion for `pack:ga4-google-tagging`.
+  
+  ## Requirements
+  
+  - The pack MUST include GA4 Measurement Protocol reference only as a GA4 event ingestion authority.
+  - The pack MUST include GA4 Measurement Protocol events reference only as a GA4 event-name and event-parameter taxonomy authority.
+  - The pack MUST include Google tag `gtag.js` API reference only as a browser command/runtime authority.
+  - The pack MUST include Google Tag Manager developer documentation only as a tag-management deployment and data-layer authority.
+  - The pack MUST include GA4 BigQuery Export schema only as an exported data-shape and evidence authority.
+  - The pack MUST include Google Consent Mode overview only as a Google tag consent-state signaling authority.
+  - The pack MUST exclude non-Google analytics event systems, URL-query attribution foundations, advertising conversion APIs, general consent frameworks, customer identity records, and broad privacy-governance records.
+  
+  ## Evidence Expectations
+  
+  - Each accepted source must appear in the research source file or an approved source update.
+  - Each downstream template must identify the authority role of its target source.
+  - Excluded adjacent targets should have a documented reason when proposed during review.
+spec_kind: "governance"
