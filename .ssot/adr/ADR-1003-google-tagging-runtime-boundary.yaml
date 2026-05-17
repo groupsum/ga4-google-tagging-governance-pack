@@ -1,0 +1,29 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1003"
+number: 1003
+slug: "google-tagging-runtime-boundary"
+title: "Google Tagging Runtime Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "Google tag `gtag.js` and Google Tag Manager both support browser-side tagging, but they are different runtime and deployment surfaces. `gtag.js` exposes browser commands, while GTM provides container-managed tags, triggers, variables, and data-layer integration."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  Google tag `gtag.js` and Google Tag Manager both support browser-side tagging, but they are different runtime and deployment surfaces. `gtag.js` exposes browser commands, while GTM provides container-managed tags, triggers, variables, and data-layer integration.
+  
+  Downstream repositories need separate decisions for direct Google tag instrumentation and GTM-managed deployment because evidence, failure modes, and operational ownership differ.
+  
+  ## Decision
+  
+  This repository will treat Google tag `gtag.js` and Google Tag Manager as distinct Google tagging runtime surfaces.
+  
+  Packaged templates may require downstream repositories to decide whether they use direct `gtag.js`, GTM, both, or neither.
+  
+  `gtag.js` runtime support must not be treated as proof of GTM container behavior, and GTM deployment support must not be treated as proof of direct `gtag.js` command correctness.

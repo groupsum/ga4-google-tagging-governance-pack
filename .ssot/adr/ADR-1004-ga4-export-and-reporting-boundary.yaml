@@ -1,0 +1,29 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1004"
+number: 1004
+slug: "ga4-export-and-reporting-boundary"
+title: "GA4 Export And Reporting Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "GA4 BigQuery Export provides an exported event and user-property data shape that downstream repositories can use as evidence of collected and exported analytics records."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  GA4 BigQuery Export provides an exported event and user-property data shape that downstream repositories can use as evidence of collected and exported analytics records.
+  
+  GA4 reporting UI behavior, attribution reports, Data API behavior, and product-level reporting semantics are broader than BigQuery Export schema.
+  
+  ## Decision
+  
+  This repository will include GA4 BigQuery Export as an exported data-shape and evidence target.
+  
+  The pack will not treat BigQuery Export schema as proof of GA4 reporting UI behavior, attribution reports, Data API query behavior, or complete GA4 product conformance.
+  
+  Packaged templates may require downstream repositories to use GA4 BigQuery Export records as evidence only for exported event/user-property shape and traceability.

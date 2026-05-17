@@ -1,0 +1,34 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1002"
+number: 1002
+slug: "ga4-source-authority-stratification"
+title: "GA4 Source Authority Stratification"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "The pack combines several Google source families with different authority roles. GA4 Measurement Protocol defines server-side and non-browser event ingestion. The GA4 events reference defines accepted event names and parameters. Google tag `gtag.js` defines browser runtime commands. Google Tag Manager documentation defines tag/container/data-layer deployment behavior. GA4 BigQuery Export defines exported event and user-property schema. Google Consent Mode defines Google tag consent-state signaling."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  The pack combines several Google source families with different authority roles. GA4 Measurement Protocol defines server-side and non-browser event ingestion. The GA4 events reference defines accepted event names and parameters. Google tag `gtag.js` defines browser runtime commands. Google Tag Manager documentation defines tag/container/data-layer deployment behavior. GA4 BigQuery Export defines exported event and user-property schema. Google Consent Mode defines Google tag consent-state signaling.
+  
+  Mixing those authority layers can create false claims, such as treating BigQuery export schema as ingestion validation or treating Consent Mode as full legal consent compliance.
+  
+  ## Decision
+  
+  This repository will stratify GA4 and Google tagging sources by role:
+  
+  - GA4 Measurement Protocol governs event ingestion requests.
+  - GA4 Measurement Protocol events reference governs event names and parameters.
+  - Google tag `gtag.js` governs browser command behavior for config, event, set, get, and consent.
+  - Google Tag Manager governs container, tag, trigger, variable, and data-layer deployment surfaces.
+  - GA4 BigQuery Export governs exported data shape and evidence.
+  - Google Consent Mode governs Google tag consent-state signaling.
+  
+  Packaged templates must preserve this distinction when assigning requirements to downstream implementations.

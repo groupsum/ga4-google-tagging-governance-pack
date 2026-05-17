@@ -1,0 +1,29 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1005"
+number: 1005
+slug: "consent-mode-inclusion-boundary"
+title: "Consent Mode Inclusion Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "Google Consent Mode defines Google tag consent-state signaling for analytics and advertising storage choices. It is relevant to Google tagging behavior because consent state can affect what Google tags store, send, or model."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  Google Consent Mode defines Google tag consent-state signaling for analytics and advertising storage choices. It is relevant to Google tagging behavior because consent state can affect what Google tags store, send, or model.
+  
+  Consent Mode is not a general legal consent framework, consent receipt specification, privacy preference standard, or regional privacy string protocol.
+  
+  ## Decision
+  
+  This repository will include Google Consent Mode only as a Google tag consent-state signaling target.
+  
+  The pack will not treat Consent Mode as legal consent compliance, privacy notice compliance, consent receipt storage, GPP, TCF, GPC, or broader privacy-governance authority.
+  
+  Packaged templates may require downstream repositories to represent consent-state signaling distinctly from legal consent authorization.

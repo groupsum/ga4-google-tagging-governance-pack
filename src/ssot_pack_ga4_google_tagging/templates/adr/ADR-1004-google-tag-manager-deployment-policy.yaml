@@ -1,0 +1,33 @@
+{
+  "id": "adr:google-tag-manager-deployment-policy",
+  "number": 1004,
+  "slug": "google-tag-manager-deployment-policy",
+  "title": "Google Tag Manager Deployment Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Google Tag Manager supports container-managed deployment of tags, triggers, variables, and data-layer interactions.",
+    "GTM can deploy GA4-related behavior, but GTM behavior is not identical to direct gtag.js instrumentation.",
+    "Downstream repositories need a decision for whether GTM-managed tagging is part of their governed analytics surface."
+  ],
+  "authority_sources": [
+    "Google Tag Manager developer documentation"
+  ],
+  "decision": [
+    "This repository treats Google Tag Manager documentation as the authority for GTM container, tag, trigger, variable, and data-layer deployment behavior.",
+    "Implementations that use GTM must define the boundary between application-owned data-layer events and container-managed tag execution.",
+    "GTM deployment support must not be used as proof of direct gtag.js command correctness or Measurement Protocol request correctness."
+  ],
+  "consequences": [
+    "Downstream tests can validate data-layer payloads, trigger assumptions, container deployment evidence, and tag execution expectations.",
+    "GTM-governed evidence can remain separate from direct browser command evidence.",
+    "Operational ownership of application code and container configuration can be documented independently."
+  ],
+  "exclusions": [
+    "Direct gtag.js command semantics",
+    "GA4 Measurement Protocol request validation",
+    "Legal consent compliance",
+    "Non-Google tag management systems"
+  ]
+}

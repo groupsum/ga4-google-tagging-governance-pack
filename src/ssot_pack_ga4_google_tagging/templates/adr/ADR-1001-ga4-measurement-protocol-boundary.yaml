@@ -1,0 +1,34 @@
+{
+  "id": "adr:ga4-measurement-protocol-boundary",
+  "number": 1001,
+  "slug": "ga4-measurement-protocol-boundary",
+  "title": "GA4 Measurement Protocol Boundary",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Some implementations send analytics events to Google Analytics 4 from servers, kiosks, batch processors, or other non-browser clients.",
+    "GA4 Measurement Protocol defines the event ingestion endpoint and request shape for those use cases.",
+    "Measurement Protocol support is separate from browser tag runtime behavior, event taxonomy conformance, exported data evidence, and reporting behavior."
+  ],
+  "authority_sources": [
+    "GA4 Measurement Protocol reference"
+  ],
+  "decision": [
+    "This repository treats GA4 Measurement Protocol as the authority for GA4 server-side and non-browser event ingestion requests.",
+    "Implementations that claim Measurement Protocol support must define the request fields, authentication inputs, validation behavior, retry behavior, and evidence expected for event submission.",
+    "Measurement Protocol conformance must not be used as proof of Google tag runtime behavior, Google Tag Manager behavior, GA4 BigQuery Export shape, or GA4 reporting UI behavior."
+  ],
+  "consequences": [
+    "Downstream tests can validate request construction, required field handling, optional field handling, error behavior, and evidence capture for Measurement Protocol submissions.",
+    "Downstream implementations can support Measurement Protocol without supporting browser-based Google tagging.",
+    "Claims about accepted events require separate event taxonomy requirements."
+  ],
+  "exclusions": [
+    "Google tag gtag.js browser command behavior",
+    "Google Tag Manager container deployment behavior",
+    "GA4 BigQuery Export schema",
+    "GA4 reporting UI or Data API behavior",
+    "Google Ads conversion upload APIs"
+  ]
+}

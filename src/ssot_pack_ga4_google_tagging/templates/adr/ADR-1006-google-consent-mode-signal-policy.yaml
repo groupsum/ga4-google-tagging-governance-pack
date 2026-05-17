@@ -1,0 +1,35 @@
+{
+  "id": "adr:google-consent-mode-signal-policy",
+  "number": 1006,
+  "slug": "google-consent-mode-signal-policy",
+  "title": "Google Consent Mode Signal Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Google Consent Mode lets implementations communicate consent-state signals that affect Google tag behavior for analytics and advertising storage.",
+    "Consent-state signaling is operationally important for Google tagging, but it is not the same as legal consent capture, notice presentation, consent receipt storage, or regional privacy string transmission.",
+    "Downstream repositories need a decision that separates Google tag consent-state behavior from broader privacy governance."
+  ],
+  "authority_sources": [
+    "Google Consent Mode overview",
+    "Google tag gtag.js API reference"
+  ],
+  "decision": [
+    "This repository treats Google Consent Mode as the authority for Google tag consent-state signaling.",
+    "Implementations must distinguish consent-state command behavior from legal consent authorization and privacy preference records.",
+    "Consent Mode support must not be used as proof of compliance with GPP, TCF, GPC, consent receipt specifications, or privacy laws."
+  ],
+  "consequences": [
+    "Downstream tests can validate consent command inputs, default consent state, update behavior, and analytics or advertising storage signal handling.",
+    "Consent-state evidence can be linked to Google tag behavior without absorbing broader privacy-governance obligations.",
+    "Broader consent and privacy compliance claims require separate governance sources."
+  ],
+  "exclusions": [
+    "IAB Global Privacy Platform",
+    "IAB Europe Transparency and Consent Framework",
+    "Global Privacy Control",
+    "Consent receipt standards",
+    "Legal privacy-compliance determinations"
+  ]
+}

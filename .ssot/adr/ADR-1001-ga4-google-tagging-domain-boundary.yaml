@@ -1,0 +1,29 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1001"
+number: 1001
+slug: "ga4-google-tagging-domain-boundary"
+title: "GA4 Google Tagging Domain Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "The `pack:ga4-google-tagging` pack curates governance templates for Google Analytics 4 and Google tagging surfaces. Its source set includes GA4 Measurement Protocol, GA4 Measurement Protocol events, Google tag `gtag.js`, Google Tag Manager, GA4 BigQuery Export, and Google Consent Mode."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  The `pack:ga4-google-tagging` pack curates governance templates for Google Analytics 4 and Google tagging surfaces. Its source set includes GA4 Measurement Protocol, GA4 Measurement Protocol events, Google tag `gtag.js`, Google Tag Manager, GA4 BigQuery Export, and Google Consent Mode.
+  
+  Adjacent analytics subjects are intentionally outside this pack when they govern non-Google analytics products, generic event envelopes, URL query attribution foundations, ad platform conversion upload APIs, customer identity/profile records, or general privacy-governance records.
+  
+  ## Decision
+  
+  This repository will curate only GA4 event ingestion, GA4 event taxonomy, Google tag runtime commands, GTM deployment/data-layer behavior, GA4 BigQuery export shape, and Google Consent Mode signaling for `pack:ga4-google-tagging`.
+  
+  The pack will not curate general product analytics APIs, non-Google CDP event specs, ad conversion APIs, customer identity/profile governance, or broad consent receipt/privacy record standards.
+  
+  Packaged templates in this repository may reference Google documentation only when those sources directly support GA4 and Google tagging implementation decisions.

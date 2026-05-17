@@ -28,8 +28,12 @@ GA4 And Google Tagging Governance
 
 ## Included ADRs
 
-- `adr:ga4-google-tagging-boundary` - GA4 Google Tagging Boundary
-- `adr:ga4-export-and-event-authority` - GA4 Export And Event Authority
+- `adr:ga4-measurement-protocol-boundary` - GA4 Measurement Protocol Boundary
+- `adr:ga4-event-taxonomy-authority` - GA4 Event Taxonomy Authority
+- `adr:google-tag-runtime-policy` - Google Tag Runtime Policy
+- `adr:google-tag-manager-deployment-policy` - Google Tag Manager Deployment Policy
+- `adr:ga4-bigquery-export-evidence-policy` - GA4 BigQuery Export Evidence Policy
+- `adr:google-consent-mode-signal-policy` - Google Consent Mode Signal Policy
 
 ## Included SPECs
 

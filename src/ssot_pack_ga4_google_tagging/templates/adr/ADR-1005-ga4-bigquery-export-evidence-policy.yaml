@@ -1,0 +1,34 @@
+{
+  "id": "adr:ga4-bigquery-export-evidence-policy",
+  "number": 1005,
+  "slug": "ga4-bigquery-export-evidence-policy",
+  "title": "GA4 BigQuery Export Evidence Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "GA4 BigQuery Export provides a downstream-observable data shape for events and user properties that have been exported from GA4.",
+    "Exported data can be useful evidence for collection and schema outcomes, but it does not prove every aspect of ingestion, tagging, attribution, or reporting behavior.",
+    "Downstream repositories need a decision for using GA4 export rows as governed evidence."
+  ],
+  "authority_sources": [
+    "GA4 BigQuery Export schema"
+  ],
+  "decision": [
+    "This repository treats GA4 BigQuery Export schema as the authority for exported GA4 event and user-property data shape.",
+    "Implementations may use exported rows as evidence for event shape, parameter shape, timestamps, user properties, device context, traffic-source context, and ecommerce fields when those fields are in scope.",
+    "BigQuery Export evidence must not be used as proof of GA4 reporting UI, Google tag runtime correctness, or Measurement Protocol request validity by itself."
+  ],
+  "consequences": [
+    "Downstream tests can validate exported table fields and expected nested record shapes.",
+    "Export evidence can close evidence gaps for collected events when direct ingestion evidence is unavailable or insufficient.",
+    "Export-specific claims remain separable from ingestion and tagging claims."
+  ],
+  "exclusions": [
+    "GA4 reporting UI behavior",
+    "GA4 Data API query behavior",
+    "Google tag command behavior",
+    "Google Tag Manager deployment behavior",
+    "Measurement Protocol request validation"
+  ]
+}

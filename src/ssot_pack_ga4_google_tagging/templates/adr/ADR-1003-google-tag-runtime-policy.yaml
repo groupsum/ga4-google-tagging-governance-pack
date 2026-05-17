@@ -1,0 +1,34 @@
+{
+  "id": "adr:google-tag-runtime-policy",
+  "number": 1003,
+  "slug": "google-tag-runtime-policy",
+  "title": "Google Tag Runtime Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Browser implementations often use the Google tag gtag.js API to configure destinations, send events, set shared fields, read values, and apply consent state.",
+    "Direct Google tag runtime behavior is separate from Google Tag Manager container deployment and server-side Measurement Protocol submission.",
+    "Downstream repositories need a decision for whether and how direct gtag.js command usage is governed."
+  ],
+  "authority_sources": [
+    "Google tag gtag.js API reference",
+    "Google Consent Mode overview"
+  ],
+  "decision": [
+    "This repository treats Google tag gtag.js documentation as the authority for direct browser command behavior.",
+    "Implementations that use gtag.js must define which command families are supported: config, event, set, get, and consent.",
+    "Consent command behavior must be treated as Google tag consent-state signaling, not as proof of legal consent compliance."
+  ],
+  "consequences": [
+    "Downstream tests can validate command shape, command ordering, destination configuration, event dispatch, shared settings, reads, and consent updates.",
+    "Direct gtag.js instrumentation can be governed without requiring Google Tag Manager.",
+    "Evidence for browser command invocation remains separate from backend ingestion and exported data evidence."
+  ],
+  "exclusions": [
+    "Google Tag Manager container behavior",
+    "GA4 Measurement Protocol server-side submission",
+    "Legal consent records or consent receipts",
+    "GA4 reporting UI behavior"
+  ]
+}

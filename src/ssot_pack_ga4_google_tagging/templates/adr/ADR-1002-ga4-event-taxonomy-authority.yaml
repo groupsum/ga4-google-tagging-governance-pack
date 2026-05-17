@@ -1,0 +1,34 @@
+{
+  "id": "adr:ga4-event-taxonomy-authority",
+  "number": 1002,
+  "slug": "ga4-event-taxonomy-authority",
+  "title": "GA4 Event Taxonomy Authority",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "GA4 event collection depends on event names and event parameters that are accepted or recommended by Google documentation.",
+    "Event taxonomy decisions are distinct from transport decisions such as Measurement Protocol request construction or browser tag command invocation.",
+    "Downstream repositories need a durable decision for treating GA4 event names and parameters as vendor-defined taxonomy."
+  ],
+  "authority_sources": [
+    "GA4 Measurement Protocol events reference",
+    "GA4 Measurement Protocol reference"
+  ],
+  "decision": [
+    "This repository treats the GA4 event reference as the authority for GA4 event names and event parameters used by downstream implementations.",
+    "Implementations must distinguish accepted GA4 event taxonomy from local custom event names and local custom parameters.",
+    "Event taxonomy conformance must remain separate from transport-level request conformance and export-level data-shape evidence."
+  ],
+  "consequences": [
+    "Downstream tests can validate recommended event names, required parameters, optional parameters, custom event handling, and invalid event cases.",
+    "Downstream implementations can map internal events to GA4 events while preserving traceability to the source taxonomy.",
+    "Custom events can be supported only when the downstream repository explicitly defines their local semantics."
+  ],
+  "exclusions": [
+    "Non-GA4 analytics event taxonomies",
+    "GA4 reporting UI behavior",
+    "GA4 BigQuery Export schema conformance",
+    "Google Ads conversion event APIs"
+  ]
+}
