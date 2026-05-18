@@ -1,10 +1,13 @@
+<div align="center">
+
 # ga4-google-tagging-governance-pack
 
 [![PyPI version](https://img.shields.io/pypi/v/ga4-google-tagging-governance-pack.svg)](https://pypi.org/project/ga4-google-tagging-governance-pack/)
 [![Python versions](https://img.shields.io/pypi/pyversions/ga4-google-tagging-governance-pack.svg)](https://pypi.org/project/ga4-google-tagging-governance-pack/)
 [![License](https://img.shields.io/pypi/l/ga4-google-tagging-governance-pack.svg)](https://pypi.org/project/ga4-google-tagging-governance-pack/)
 [![Publish](https://github.com/groupsum/ga4-google-tagging-governance-pack/actions/workflows/publish.yml/badge.svg)](https://github.com/groupsum/ga4-google-tagging-governance-pack/actions/workflows/publish.yml)
-[![GitHub package](https://img.shields.io/badge/GitHub-package-24292f)](https://github.com/groupsum/ga4-google-tagging-governance-pack)
+
+</div>
 
 Installable SSOT governance pack for GA4 Measurement Protocol, Google tag, Google Tag Manager, GA4 event parameters, and BigQuery exports.
 
