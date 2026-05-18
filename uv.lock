@@ -90,7 +90,7 @@ wheels = [
 ]
 
 [[package]]
-name = "ssot-pack-ga4-google-tagging"
+name = "ga4-google-tagging-governance-pack"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

@@ -16,21 +16,21 @@ from ssot_pack_ga4_google_tagging import (
 class GovernancePackManifestTests(unittest.TestCase):
     def test_pack_metadata_contract_is_exposed(self) -> None:
         metadata = load_pack_metadata()
-        self.assertEqual("ssot-pack-ga4-google-tagging", __ssot_package_name__)
-        self.assertEqual("ssot-pack-ga4-google-tagging", __pypi_package_name__)
+        self.assertEqual("ga4-google-tagging-governance-pack", __ssot_package_name__)
+        self.assertEqual("ga4-google-tagging-governance-pack", __pypi_package_name__)
         self.assertEqual("1.0.0", metadata["schema_version"])
-        self.assertEqual("ssot-pack-ga4-google-tagging", metadata["ssot_package_name"])
+        self.assertEqual("ga4-google-tagging-governance-pack", metadata["ssot_package_name"])
         self.assertEqual("pack:ga4-google-tagging", metadata["origin"]["id"])
         self.assertEqual("ssot_pack_ga4_google_tagging", metadata["origin"]["import_name"])
         self.assertEqual("governance-pack", metadata["origin"]["kind"])
         self.assertEqual("extension-pack", metadata["trust"]["origin"])
-        self.assertEqual("extension-pack:ssot-pack-ga4-google-tagging", metadata["trust"]["reservation_owner"])
+        self.assertEqual("extension-pack:ga4-google-tagging-governance-pack", metadata["trust"]["reservation_owner"])
         self.assertFalse(metadata["trust"]["trusted_by_default"])
         self.assertEqual("1.0.0", load_pack_schema_version())
 
     def test_pack_manifest_contract_is_exposed(self) -> None:
         manifest = load_pack_manifest()
-        self.assertEqual("ssot-pack-ga4-google-tagging", manifest["metadata"]["origin"]["package_name"])
+        self.assertEqual("ga4-google-tagging-governance-pack", manifest["metadata"]["origin"]["package_name"])
         self.assertEqual(6, len(manifest["documents"]["adr"]))
         self.assertEqual(12, len(manifest["documents"]["spec"]))
 

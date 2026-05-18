@@ -1,4 +1,4 @@
-# ssot-pack-ga4-google-tagging
+# ga4-google-tagging-governance-pack
 
 Installable SSOT governance pack for GA4 Measurement Protocol, Google tag, Google Tag Manager, GA4 event parameters, and BigQuery exports.
 
@@ -8,10 +8,10 @@ This repository is an installable SSOT Registry governance pack. It packages imm
 
 - Pack ID: `pack:ga4-google-tagging`
 - Priority: `P1.1`
-- PyPI package: `ssot-pack-ga4-google-tagging`
+- PyPI package: `ga4-google-tagging-governance-pack`
 - Import package: `ssot_pack_ga4_google_tagging`
 - GitHub repository: `groupsum/ga4-google-tagging-governance-pack`
-- Reservation owner: `extension-pack:ssot-pack-ga4-google-tagging`
+- Reservation owner: `extension-pack:ga4-google-tagging-governance-pack`
 
 ## Domain Focus
 
@@ -53,15 +53,15 @@ GA4 And Google Tagging Governance
 ## Install With uv
 
 ```bash
-uv add ssot-pack-ga4-google-tagging
-uv add ssot-registry ssot-pack-ga4-google-tagging
+uv add ga4-google-tagging-governance-pack
+uv add ssot-registry ga4-google-tagging-governance-pack
 ```
 
 ## Use With The SSOT Registry CLI
 
 ```bash
-uvx --from ssot-registry ssot pack install ssot-pack-ga4-google-tagging
-uvx --from ssot-registry ssot pack sync . ssot-pack-ga4-google-tagging
+uvx --from ssot-registry ssot pack install ga4-google-tagging-governance-pack
+uvx --from ssot-registry ssot pack sync . ga4-google-tagging-governance-pack
 uv run ssot adr list .
 uv run ssot spec list .
 ```
@@ -78,5 +78,5 @@ spec_manifest = load_document_manifest("spec")
 ## Resources
 
 - GitHub repository: https://github.com/groupsum/ga4-google-tagging-governance-pack
-- PyPI package: https://pypi.org/project/ssot-pack-ga4-google-tagging/
+- PyPI package: https://pypi.org/project/ga4-google-tagging-governance-pack/
 - SSOT Registry: https://pypi.org/project/ssot-registry/

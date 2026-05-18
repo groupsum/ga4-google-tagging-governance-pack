@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "ssot_package_name": "ssot-pack-ga4-google-tagging",
+  "ssot_package_name": "ga4-google-tagging-governance-pack",
   "origin": {
     "id": "pack:ga4-google-tagging",
-    "package_name": "ssot-pack-ga4-google-tagging",
+    "package_name": "ga4-google-tagging-governance-pack",
     "import_name": "ssot_pack_ga4_google_tagging",
     "kind": "governance-pack",
     "title": "GA4 And Google Tagging Governance",
@@ -19,7 +19,7 @@
   "trust": {
     "trusted_by_default": false,
     "origin": "extension-pack",
-    "reservation_owner": "extension-pack:ssot-pack-ga4-google-tagging"
+    "reservation_owner": "extension-pack:ga4-google-tagging-governance-pack"
   },
   "documents": {
     "adr": {

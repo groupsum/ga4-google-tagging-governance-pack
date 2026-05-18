@@ -13,7 +13,7 @@ except ModuleNotFoundError:  # pragma: no cover
 ROOT = Path(__file__).resolve().parents[1]
 ADR_TEMPLATES = ROOT / "src" / "ssot_pack_ga4_google_tagging" / "templates" / "adr"
 SPEC_TEMPLATES = ROOT / "src" / "ssot_pack_ga4_google_tagging" / "templates" / "specs"
-RESERVATION_OWNER = "extension-pack:ssot-pack-ga4-google-tagging"
+RESERVATION_OWNER = "extension-pack:ga4-google-tagging-governance-pack"
 MINIMUM_SCHEMA_VERSION = "0.4.0"
 
 
