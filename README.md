@@ -33,7 +33,7 @@ Use this package when a downstream repository needs to answer: which standards, 
 - Pack ID: `pack:ga4-google-tagging`
 - PyPI package: `ga4-google-tagging-governance-pack`
 - Import package: `ssot_pack_ga4_google_tagging`
-- GitHub repository: `groupsum/ga4-google-tagging-governance-pack`
+- GitHub repository: [groupsum/ga4-google-tagging-governance-pack](https://github.com/groupsum/ga4-google-tagging-governance-pack)
 - Reservation owner: `extension-pack:ga4-google-tagging-governance-pack`
 
 ## Domain Focus
