@@ -48,27 +48,27 @@ GA4 And Google Tagging Governance
 
 ## Included ADRs
 
-- `adr:ga4-measurement-protocol-boundary` - GA4 Measurement Protocol Boundary
-- `adr:ga4-event-taxonomy-authority` - GA4 Event Taxonomy Authority
-- `adr:google-tag-runtime-policy` - Google Tag Runtime Policy
-- `adr:google-tag-manager-deployment-policy` - Google Tag Manager Deployment Policy
-- `adr:ga4-bigquery-export-evidence-policy` - GA4 BigQuery Export Evidence Policy
-- `adr:google-consent-mode-signal-policy` - Google Consent Mode Signal Policy
+- [`adr:ga4-measurement-protocol-boundary`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/adr/ADR-1001-ga4-measurement-protocol-boundary.yaml) - GA4 Measurement Protocol Boundary
+- [`adr:ga4-event-taxonomy-authority`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/adr/ADR-1002-ga4-event-taxonomy-authority.yaml) - GA4 Event Taxonomy Authority
+- [`adr:google-tag-runtime-policy`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/adr/ADR-1003-google-tag-runtime-policy.yaml) - Google Tag Runtime Policy
+- [`adr:google-tag-manager-deployment-policy`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/adr/ADR-1004-google-tag-manager-deployment-policy.yaml) - Google Tag Manager Deployment Policy
+- [`adr:ga4-bigquery-export-evidence-policy`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/adr/ADR-1005-ga4-bigquery-export-evidence-policy.yaml) - GA4 BigQuery Export Evidence Policy
+- [`adr:google-consent-mode-signal-policy`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/adr/ADR-1006-google-consent-mode-signal-policy.yaml) - Google Consent Mode Signal Policy
 
 ## Included SPECs
 
-- `spc:ga4-measurement-protocol-request-requirements` - GA4 Measurement Protocol Request Requirements
-- `spc:ga4-measurement-protocol-event-requirements` - GA4 Measurement Protocol Event Requirements
-- `spc:ga4-recommended-event-parameter-requirements` - GA4 Recommended Event Parameter Requirements
-- `spc:gtag-config-command-requirements` - Google Tag Config Command Requirements
-- `spc:gtag-event-command-requirements` - Google Tag Event Command Requirements
-- `spc:gtag-set-get-command-requirements` - Google Tag Set And Get Command Requirements
-- `spc:gtag-consent-command-requirements` - Google Tag Consent Command Requirements
-- `spc:google-tag-manager-data-layer-requirements` - Google Tag Manager Data Layer Requirements
-- `spc:google-tag-manager-container-deployment-requirements` - Google Tag Manager Container Deployment Requirements
-- `spc:ga4-bigquery-export-event-schema-requirements` - GA4 BigQuery Export Event Schema Requirements
-- `spc:ga4-bigquery-export-user-property-requirements` - GA4 BigQuery Export User Property Requirements
-- `spc:google-consent-mode-storage-signal-requirements` - Google Consent Mode Storage Signal Requirements
+- [`spc:ga4-measurement-protocol-request-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2001-ga4-measurement-protocol-request-requirements.yaml) - GA4 Measurement Protocol Request Requirements
+- [`spc:ga4-measurement-protocol-event-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2002-ga4-measurement-protocol-event-requirements.yaml) - GA4 Measurement Protocol Event Requirements
+- [`spc:ga4-recommended-event-parameter-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2003-ga4-recommended-event-parameter-requirements.yaml) - GA4 Recommended Event Parameter Requirements
+- [`spc:gtag-config-command-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2004-gtag-config-command-requirements.yaml) - Google Tag Config Command Requirements
+- [`spc:gtag-event-command-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2005-gtag-event-command-requirements.yaml) - Google Tag Event Command Requirements
+- [`spc:gtag-set-get-command-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2006-gtag-set-get-command-requirements.yaml) - Google Tag Set And Get Command Requirements
+- [`spc:gtag-consent-command-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2007-gtag-consent-command-requirements.yaml) - Google Tag Consent Command Requirements
+- [`spc:google-tag-manager-data-layer-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2008-google-tag-manager-data-layer-requirements.yaml) - Google Tag Manager Data Layer Requirements
+- [`spc:google-tag-manager-container-deployment-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2009-google-tag-manager-container-deployment-requirements.yaml) - Google Tag Manager Container Deployment Requirements
+- [`spc:ga4-bigquery-export-event-schema-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2010-ga4-bigquery-export-event-schema-requirements.yaml) - GA4 BigQuery Export Event Schema Requirements
+- [`spc:ga4-bigquery-export-user-property-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2011-ga4-bigquery-export-user-property-requirements.yaml) - GA4 BigQuery Export User Property Requirements
+- [`spc:google-consent-mode-storage-signal-requirements`](https://github.com/groupsum/ga4-google-tagging-governance-pack/blob/master/src/ssot_pack_ga4_google_tagging/templates/specs/SPEC-2012-google-consent-mode-storage-signal-requirements.yaml) - Google Consent Mode Storage Signal Requirements
 
 ## Install With uv
 
