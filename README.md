@@ -28,7 +28,6 @@ Use this package when a downstream repository needs to answer: which standards, 
 ## Pack Metadata
 
 - Pack ID: `pack:ga4-google-tagging`
-- Priority: `P1.1`
 - PyPI package: `ga4-google-tagging-governance-pack`
 - Import package: `ssot_pack_ga4_google_tagging`
 - GitHub repository: `groupsum/ga4-google-tagging-governance-pack`
