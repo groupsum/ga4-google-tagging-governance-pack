@@ -3,9 +3,12 @@
   "number": 2012,
   "slug": "google-consent-mode-storage-signal-requirements",
   "title": "Google Consent Mode Storage Signal Requirements",
-  "status": "active",
+  "status": "superseded",
   "supersedes": [],
-  "superseded_by": [],
+  "superseded_by": [
+    "spc:google-consent-mode-storage-requirements",
+    "spc:google-consent-mode-ad-data-requirements"
+  ],
   "spec_kind": "governance",
   "adr_ids": [
     "adr:google-consent-mode-signal-policy"
@@ -37,5 +40,11 @@
     "Fixtures for default and updated Consent Mode storage signals.",
     "Browser/runtime evidence showing consent-state command behavior.",
     "Negative examples for unknown signals, missing defaults, and unsupported consent-state behavior."
+  ],
+  "status_notes": [
+    {
+      "date": "2026-08-10",
+      "note": "Superseded by narrower canonical governance documents during the portfolio deduplication."
+    }
   ]
 }

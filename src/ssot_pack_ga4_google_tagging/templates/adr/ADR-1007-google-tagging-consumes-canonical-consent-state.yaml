@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "adr",
+  "id": "adr:google-tagging-consumes-canonical-consent-state",
+  "number": 1007,
+  "slug": "google-tagging-consumes-canonical-consent-state",
+  "title": "Google Tagging Consumes Canonical Consent State",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Google tagging consumes consent state resolved by the consent and privacy signals authority.",
+  "body": "Google tagging owns command invocation and analytics behavior. Consent governance owns signal semantics, precedence, defaults, updates, and jurisdictional resolution.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://developers.google.com/tag-platform/security/guides/consent"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "google",
+    "tagging",
+    "consumes",
+    "canonical",
+    "consent",
+    "state"
+  ]
+}

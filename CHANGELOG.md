@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0.dev1
+
+- Removed duplicate Consent Mode state ownership and added the Google tagging application profile.
+
 ## 0.1.1.dev1
 
 - Pending release notes.

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:consent-state-to-google-tag-application-profile",
+  "number": 2013,
+  "slug": "consent-state-to-google-tag-application-profile",
+  "title": "Consent State To Google Tag Application Profile",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines how resolved consent state is applied through Google tagging commands.",
+  "body": "## Requirements\n\n- Consume a resolved canonical consent state.\n- Map only supported consent fields into Google tag commands.\n- Record command timing and configuration without redefining consent precedence.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://developers.google.com/tag-platform/gtagjs/reference"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "consent",
+    "state",
+    "google",
+    "tag",
+    "application",
+    "profile"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:google-tagging-consumes-canonical-consent-state"
+  ]
+}

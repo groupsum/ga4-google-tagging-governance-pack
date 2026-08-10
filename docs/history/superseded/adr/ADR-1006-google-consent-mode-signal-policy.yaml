@@ -3,9 +3,11 @@
   "number": 1006,
   "slug": "google-consent-mode-signal-policy",
   "title": "Google Consent Mode Signal Policy",
-  "status": "accepted",
+  "status": "superseded",
   "supersedes": [],
-  "superseded_by": [],
+  "superseded_by": [
+    "adr:google-consent-mode-policy"
+  ],
   "context": [
     "Google Consent Mode lets implementations communicate consent-state signals that affect Google tag behavior for analytics and advertising storage.",
     "Consent-state signaling is operationally important for Google tagging, but it is not the same as legal consent capture, notice presentation, consent receipt storage, or regional privacy string transmission.",
@@ -31,5 +33,11 @@
     "Global Privacy Control",
     "Consent receipt standards",
     "Legal privacy-compliance determinations"
+  ],
+  "status_notes": [
+    {
+      "date": "2026-08-10",
+      "note": "Superseded by narrower canonical governance documents during the portfolio deduplication."
+    }
   ]
 }
