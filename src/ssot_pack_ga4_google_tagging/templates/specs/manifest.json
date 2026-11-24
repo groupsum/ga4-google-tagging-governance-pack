@@ -215,7 +215,7 @@
     "title": "Consent State To Google Tag Application Profile",
     "filename": "SPEC-2013-consent-state-to-google-tag-application-profile.yaml",
     "target_path": ".ssot/specs/SPEC-2013-consent-state-to-google-tag-application-profile.yaml",
-    "sha256": "58614eafd80ae2b43ea521666a7f1af099aca44d0f3f6f4208244d2926062e4b",
+    "sha256": "7f6dcc96f7aa7aee8270ece8c3f572faadc229cf3172f0ad946699efb48670d8",
     "origin": "extension-pack",
     "reservation_owner": "extension-pack:ga4-google-tagging-governance-pack",
     "immutable": true,
